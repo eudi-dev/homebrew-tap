@@ -2,20 +2,20 @@
 # frozen_string_literal: true
 
 # Homebrew formula for eudi-dev, published to the eudi-dev/homebrew-tap
-# repository by the release workflow. 2.7.0 (without the leading v) and
-# b47815e093003dd4fd35f8b82c1ded04d71b626890ca2e5b7ec3ea38a2055928 are filled in per release.
+# repository by the release workflow. 2.7.1 (without the leading v) and
+# 1b4a03a9d119e9fe38f1897fa2916ae5d3286a5e4fa50b34c9ecc41538ba0b2f are filled in per release.
 class EudiDev < Formula
   desc "Developer toolkit for the EUDI and OpenID4VC ecosystem"
   homepage "https://github.com/eudi-dev/eudi-dev"
-  url "https://github.com/eudi-dev/eudi-dev/archive/refs/tags/v2.7.0.tar.gz"
-  sha256 "b47815e093003dd4fd35f8b82c1ded04d71b626890ca2e5b7ec3ea38a2055928"
+  url "https://github.com/eudi-dev/eudi-dev/archive/refs/tags/v2.7.1.tar.gz"
+  sha256 "1b4a03a9d119e9fe38f1897fa2916ae5d3286a5e4fa50b34c9ecc41538ba0b2f"
   license "Apache-2.0"
   head "https://github.com/eudi-dev/eudi-dev.git", branch: "main"
 
   depends_on "go" => :build
 
   def install
-    ldflags = "-s -w -X github.com/dominikschlosser/eudi-dev/v2/cmd.Version=v#{version}"
+    ldflags = "-s -w -X github.com/eudi-dev/eudi-dev/v2/cmd.Version=v#{version}"
     system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"eudi")
     # Legacy command name keeps working for the time being
     bin.install_symlink "eudi" => "oid4vc-dev"
