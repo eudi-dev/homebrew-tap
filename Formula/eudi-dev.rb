@@ -2,13 +2,13 @@
 # frozen_string_literal: true
 
 # Homebrew formula for eudi-dev, published to the eudi-dev/homebrew-tap
-# repository by the release workflow. 3.8.0 (without the leading v) and
-# 9c8570043a35867a03e2ee24d5ddda842ce9e0541b494f5c6eb5cfe2f4b6a935 are filled in per release.
+# repository by the release workflow. 3.9.0 (without the leading v) and
+# 02a59ec9f465cdae2c7c2c92338108603af958cafe5852c22e24be8aa4736df8 are filled in per release.
 class EudiDev < Formula
   desc "Test Wallet and Developer toolkit for the EUDI ecosystem"
   homepage "https://github.com/eudi-dev/eudi-dev"
-  url "https://github.com/eudi-dev/eudi-dev/archive/refs/tags/v3.8.0.tar.gz"
-  sha256 "9c8570043a35867a03e2ee24d5ddda842ce9e0541b494f5c6eb5cfe2f4b6a935"
+  url "https://github.com/eudi-dev/eudi-dev/archive/refs/tags/v3.9.0.tar.gz"
+  sha256 "02a59ec9f465cdae2c7c2c92338108603af958cafe5852c22e24be8aa4736df8"
   license "Apache-2.0"
   head "https://github.com/eudi-dev/eudi-dev.git", branch: "main"
 
